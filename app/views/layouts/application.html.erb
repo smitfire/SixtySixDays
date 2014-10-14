@@ -7,26 +7,42 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <nav>
-        <ul>
-          <li>
-            Home
-          </li>
-          <li>
-            About
-          </li>
-          <li>
-            Profile
-          </li>
-        </ul>
-      </nav>
-    </header>
-    
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SixtySix Days But The Bitch At One</a>
+          </div>
+
+          <div class="navbar-collapse collapse">
+            <%= form_for :user, html:{class: 'navbar-form navbar-right'}, url: sessions_path do |f| %>
+              <p class="form-group">
+                <%= f.text_field :email, class: 'form-control', :placeholder => "Email" %>
+              </p>
+              <p class="form-group">
+                <%= f.password_field :password, class: 'form-control', :placeholder => "Password" %>
+              </p>
+              
+              <p class="form-group">
+                <%= f.submit "Sign In", class: 'btn btn-primary' %>
+              </p>
+            <% end %>
+          </div><!--/.navbar-collapse -->
+        </div>
+      </div>
+
     <%= yield %>
-  
-  </div>
+    
+    <hr>
+    
+    <footer>
+      <p>&copy; Company 2014</p>
+    </footer>
 
 </body>
 </html>
