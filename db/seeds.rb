@@ -10,6 +10,7 @@ require 'faker'
 require 'csv'
 
 User.delete_all
+Task.delete_all
 # Category.delete_all
 # Task.delete_all
 # Group.delete_all
@@ -19,3 +20,8 @@ User.create(username: 'BigDickBaller', email: 'davidlazarus89@gmail.com', passwo
 User.create(username: 'Destroyer', email: 'ruben.casimir@gmail.com', password: 'rapeandpilage', password_confirmation: 'rapeandpilage')
 User.create(username: 'Minishredder', email: 'david.broere@gmail.com', password: 'braveheart ', password_confirmation: 'braveheart')
 
+User.all.each do |user|
+  5.times do 
+    user.tasks << Task.create(title: Faker::Name.name, description: Faker::Lorem.sentence(14), status: 'pending')
+  end
+end

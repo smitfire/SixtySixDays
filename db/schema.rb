@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20141014083136) do
     t.integer  "user_id"
     t.integer  "category_id"
     t.string   "title"
+    t.string   "status"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
