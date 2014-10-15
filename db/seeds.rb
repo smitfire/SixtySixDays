@@ -15,7 +15,7 @@ User.delete_all
 # Group.delete_all
 
 User.create(username: 'DarthVader', email: 'nick.smit@gmail.com', password: 'metime', password_confirmation: 'metime')
-User.create(username: 'BigDickBaller', email: 'davidlazarus89@gmail.com', password: 'stdcity', password_confirmation: 'metime')
-User.create(username: 'Destroyer', email: 'ruben.casimir@gmail.com', password: 'rapeandpilage', password_confirmation: 'metime')
-User.create(username: 'Minishredder', email: 'david.broere@gmail.com', password: 'braveheart ', password_confirmation: 'metime')
+User.create(username: 'BigDickBaller', email: 'davidlazarus89@gmail.com', password: 'stdcity', password_confirmation: 'stdcity')
+User.create(username: 'Destroyer', email: 'ruben.casimir@gmail.com', password: 'rapeandpilage', password_confirmation: 'rapeandpilage')
+User.create(username: 'Minishredder', email: 'david.broere@gmail.com', password: 'braveheart ', password_confirmation: 'braveheart')
 
