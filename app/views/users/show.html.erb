@@ -8,29 +8,25 @@
   </section>
   <hr>
   <section>
-    <h3>Tasks (They are just jibberish for now</h3>
-    <% @user.tasks.each do |task| %>
-      <div class="col md-5">
-        <h6>Title: <%= task.title %></h6>
-        <p><span class="red">Description:</span><%= task.description%></p>
-      </div>
-    <% end %>
+    <h3>Tasks (They are just jibberish for now)</h3>
+     <table class="table table-striped table-hover">
+         <thead>
+           <tr>
+             <th>Title</th>
+             <th>Description</th>
+             <th>Status</th>
+             <th>Days Left</th>
+           </tr>
+         </thead>
+         <% @user.tasks.each do |task| %>
+           <tr>
+             <td><%= task.title %></td>
+             <td><%= truncate(task.description, length: 53) %></td>
+             <td><%= task.status %></td>
+             <td>66</td>
+           </tr>
+         <% end %>
+     </table> 
   </section>
-  <table class="table table-striped table-hover">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th>Days Left</th>
-        </tr>
-      </thead>
-      <% @user.tasks.each do |task| %>
-        <tr>
-          <td><%= task.title %></td>
-          <td><%= truncate(task.description, length: 53) %></td>
-          <td><%= task.status %></td>
-        </tr>
-      <% end %>
-  </table>
+
 </div>
