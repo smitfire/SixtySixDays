@@ -17,10 +17,16 @@
               <span class="icon-bar"></span>
             </button>
             <%= link_to "66Days", root_path, class:"navbar-brand"  %>
-          </div> 
-          <% unless current_user %>
-              <%= render "welcome/sign_in" %>
-          <% end %>  
+          </div>
+          <div class="navbar-collapse">
+            <% if !current_user %>
+                <%= render "welcome/sign_in" %>
+                <% else %>
+                <div class="navbar-right navbar-form">
+                  <%= link_to 'Profile Page', user_path(current_user.id), class: 'btn btn-default' %>
+                </div>
+            <% end %>
+          </div>   
         </div>
       </div>
     <hr>

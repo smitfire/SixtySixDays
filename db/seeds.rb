@@ -18,10 +18,12 @@ Task.delete_all
 User.create(username: 'DarthVader', email: 'nick.smit@gmail.com', password: 'metime', password_confirmation: 'metime')
 User.create(username: 'BigDickBaller', email: 'davidlazarus89@gmail.com', password: 'stdcity', password_confirmation: 'stdcity')
 User.create(username: 'Destroyer', email: 'ruben.casimir@gmail.com', password: 'rapeandpilage', password_confirmation: 'rapeandpilage')
-User.create(username: 'Minishredder', email: 'david.broere@gmail.com', password: 'braveheart ', password_confirmation: 'braveheart')
+User.create(username: 'Minishredder', email: 'david.broere@gmail.com', password: 'braveheart', password_confirmation: 'braveheart')
+User.create(username: 'Stephpapp', email: 'sep0104@gmail.com', password: 'queenbee', password_confirmation: 'queenbee')
+User.create(username: 'G-Selena', email: 'selena.garrahan@gmail.com', password: 'gaggstar', password_confirmation: 'gangstar')
 
 User.all.each do |user|
-  5.times do 
+  10.times do 
     user.tasks << Task.create(title: Faker::Name.name, description: Faker::Lorem.sentence(14), status: 'pending')
   end
 end
