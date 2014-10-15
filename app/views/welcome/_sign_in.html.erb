@@ -1,0 +1,14 @@
+<div class="navbar-collapse collapse">
+  <%= form_for :user, html:{class: 'navbar-form navbar-right'}, url: sessions_path do |f| %>
+    <p class="form-group">
+      <%= f.text_field :email, class: 'form-control', :placeholder => "Email" %>
+    </p>
+    <p class="form-group">
+      <%= f.password_field :password, class: 'form-control', :placeholder => "Password" %>
+    </p>
+    
+    <p class="form-group">
+      <%= f.submit "Sign In", class: 'btn btn-primary' %>
+    </p>
+  <% end %>
+</div><!--/.navbar-collapse -->
