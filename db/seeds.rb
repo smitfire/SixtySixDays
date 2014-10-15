@@ -21,6 +21,7 @@ User.create(username: 'Destroyer', email: 'ruben.casimir@gmail.com', password: '
 User.create(username: 'Minishredder', email: 'david.broere@gmail.com', password: 'braveheart', password_confirmation: 'braveheart')
 User.create(username: 'Stephpapp', email: 'sep0104@gmail.com', password: 'queenbee', password_confirmation: 'queenbee')
 User.create(username: 'G-Selena', email: 'selena.garrahan@gmail.com', password: 'gaggstar', password_confirmation: 'gangstar')
+User.create(username: 'Ndowat', email: 'ndowat@gmail.com', password: 'kobelovesme', password_confirmation: 'kobelovesme')
 
 User.all.each do |user|
   10.times do 
