@@ -20,7 +20,7 @@
          </thead>
          <% @user.tasks.each do |task| %>
            <tr>
-             <td><%= task.title %></td>
+             <td><%= link_to task.title, task_path(task.id) %></td>
              <td><%= truncate(task.description, length: 53) %></td>
              <td><%= task.status %></td>
              <td>66</td>

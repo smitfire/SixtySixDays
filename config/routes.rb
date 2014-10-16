@@ -6,6 +6,7 @@ SixtySixDaysButTheBitchAintOne::Application.routes.draw do
   root 'welcome#home'
   resources :users
   resources :groups
+  resources :tasks
   resources :sessions, only: [:create, :destroy, :new]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
