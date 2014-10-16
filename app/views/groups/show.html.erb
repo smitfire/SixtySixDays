@@ -1,0 +1,16 @@
+<div class="container">
+  <section>
+    <h1>Group Page Biznitches</h1>
+    <hr>
+    <h4>Group Name: <%= @user.username %></h4>
+    <hr>
+    <h4>Number of Members: <%= @group.users.count %></h4>
+  </section>
+  <hr>
+  <section>
+    <ul>
+      <%= @group.users.each do |user| %>
+        <li><%= link_to user.name, user_path(user.id) %></li>
+      <% end %>
+    </ul>
+  </section>

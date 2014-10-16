@@ -24,6 +24,7 @@
                 <% else %>
                 <div class="navbar-right navbar-form">
                   <%= link_to 'Profile Page', user_path(current_user.id), class: 'btn btn-default' %>
+                   <%= link_to "Log out", session_path(current_user.id), method: :delete, class: 'btn btn-danger' %>
                 </div>
             <% end %>
           </div>   

@@ -13,7 +13,7 @@ User.delete_all
 Task.delete_all
 # Category.delete_all
 # Task.delete_all
-# Group.delete_all
+Group.delete_all
 
 User.create(username: 'DarthVader', email: 'nick.smit@gmail.com', password: 'metime', password_confirmation: 'metime')
 User.create(username: 'BigDickBaller', email: 'davidlazarus89@gmail.com', password: 'stdcity', password_confirmation: 'stdcity')
@@ -23,8 +23,11 @@ User.create(username: 'Stephpapp', email: 'sep0104@gmail.com', password: 'queenb
 User.create(username: 'G-Selena', email: 'selena.garrahan@gmail.com', password: 'gaggstar', password_confirmation: 'gangstar')
 User.create(username: 'Ndowat', email: 'ndowat@gmail.com', password: 'kobelovesme', password_confirmation: 'kobelovesme')
 
+group_one = Group.create(title: 'One Day Kings')
+
 User.all.each do |user|
   10.times do 
     user.tasks << Task.create(title: Faker::Name.name, description: Faker::Lorem.sentence(14), status: 'pending')
   end
+  group_one.users << user
 end
