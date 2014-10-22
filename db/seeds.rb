@@ -26,8 +26,9 @@ User.create(username: 'Ndowat', email: 'ndowat@gmail.com', password: 'kobelovesm
 group_one = Group.create(title: 'One Day Kings')
 
 User.all.each do |user|
-  10.times do 
-    user.tasks << Task.create(title: Faker::Name.name, description: Faker::Lorem.sentence(14), status: 'pending')
-  end
   group_one.users << user
 end
+
+20.times do 
+    Task.create(title: Faker::Name.name, description: Faker::Lorem.sentence(14), status: 'pending')
+  end
